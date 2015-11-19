@@ -27,8 +27,8 @@ package "check-mk-agent" do
             else
               Chef::Provider::Package
             end
-  options '--force-yes'
-  options "-o Dpkg::Options::='--force-confnew'"
+  #options '--force-yes'
+  options '--force-all'
 end
 
 check_mk_servers = servers.map{|s| relative_ipv4(s, node)}
